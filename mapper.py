@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 # Load OpenAI API key
 load_dotenv()
-openai.api_key = os.getenv("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")
+openai.api_key = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # -------- Load CTI Report --------
 def load_report(file_path):
